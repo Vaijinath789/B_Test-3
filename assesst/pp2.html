@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+            background-color: aqua;
+        }
+        input{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>validation</h1>
+    </center>
+    <hr>
+
+    <form action="" autocomplete="off" onsubmit="validation()" method="get">
+        
+        <input type="email" name="email" id="email"placeholder="email" onkeyup="validation()"><br>
+        <strong id="status"></strong>
+        <br><br>
+
+        
+        <input type="text" name="name" id="name" placeholder="First Name" onkeyup="validation()"><br>
+        <strong id="fname"></strong>
+        <br><br>
+
+        
+        <input type="text" name="lname" id="lname" placeholder="LastName" onkeyup="validation()"><br>
+        <strong id="laname"></strong>
+        <br><br>
+
+       
+        <input type="text" id="mobileNumber" placeholder="Mobile Nubmer" onkeyup="validation()" ><br>
+        <strong id="m"></strong>
+        <br><br>
+
+        <label for="male">male</label>
+        <input type="radio" id="Gender" name="male">
+
+        <label for="femal">Female</label>
+        <input type="radio" id="Gender" name="male">
+        <strong id="G"></strong>
+        <br>
+
+        <label >Kannada
+            <input type="checkbox" name="lang">
+        </label>
+        <label >Hindi
+            <input type="checkbox" name="lang">
+        </label>
+        <label >English
+            <input type="checkbox" name="lang">
+        </label>
+        <strong id="L"></strong>
+        <br>
+
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        function validation(){
+
+            event.preventDefault();
+            
+            var email = document.getElementById('email').value;
+            var status = document.getElementById("status");
+            console.log('Email =', email.value);
+
+            let regex = /^\S+@\S+\.\S+$/;  
+
+            if(email.length ==0){
+                status.innerText = 'Enter your email';
+                status.style.color ="orangered"   
+            }
+
+            else{
+                if(regex.test(email) === false){
+                    status.innerText = 'Invalid email';
+                    status.style.color ="orangered";
+                }
+
+                else{
+                    status.innerText = 'Valid email';
+                    status.style.color ="green";
+                }
+            }
+                
+            var name = document.getElementById('name').value;
+            var fname = document.getElementById("fname");
+            console.log('name =', name.value);
+
+            let regex1 =/^[A-Za-z]+$/; 
+
+            if(name.length < 4){
+                fname.innerText = 'Enter atleast 4 characters';
+                fname.style.color ="orangered"   
+            }
+
+            else{
+                if(regex1.test(name) === false){
+                    fname.innerText = 'Invalid name';
+                    fname.style.color ="orangered";
+                }
+
+                else{
+                    fname.innerText = 'Valid name';
+                    fname.style.color ="green";
+                }
+            }
+                    
+            var lname = document.getElementById('lname').value;
+            var laname = document.getElementById("laname");
+            console.log('lname =',lname.value);
+
+            let regex2 =/^[A-Za-z]+$/; 
+
+            if(lname.length < 4){
+                laname.innerText = 'Enter atleast 4 characters';
+                laname.style.color ="orangered"   
+            }
+
+            else{
+                if(regex2.test(lname) === false){
+                    laname.innerText = 'Invalid name';
+                    laname.style.color ="orangered";
+                }
+
+                else{
+                    laname.innerText = 'Valid name';
+                    laname.style.color ="green";
+                }
+            }
+
+            
+            var mobileNumber = document.getElementById('mobileNumber').value;
+            var m = document.getElementById("m");
+            console.log('mobile =', mobileNumber.value);
+
+            let regex4 =/^[0-9]*$/ ;  
+
+            if(mobileNumber.length ==0){
+                m.innerHTML = 'Enter your Number';
+                m.style.color ="orangered"   
+            }
+            
+            else{
+                if(regex4.test(mobileNumber) === false){
+                    m.innerHTML = 'Invalid Number';
+                    m.style.color ="orangered";
+                }
+                else if(mobileNumber.length!=10){
+
+                    m.innerHTML="Mobile Number must have 10 digits";
+                    }
+                else{
+                    m.innerHTML = 'Valid Mobile Number';
+                    m.style.color ="green";
+                }
+
+            }
+
+            let gender =document.getElementsByName("male").value;
+            let G =document.getElementById('G');
+            
+            if(gender==null){
+                G.innerHTML = 'Select please';
+                G.style.color ="red";
+            }
+            else{
+                G.innerHTML = 'Selected';
+                G.style.color ="green";
+            }
+
+            let lang=document.getElementsByName('lang').value;
+            let L =document.getElementById('L');
+
+            if(lang==null){
+                L.innerHTML = 'Select please';
+                L.style.color ="red";
+            }
+            else{
+                L.innerHTML = 'Selected';
+                L.style.color ="green";
+            }
+        }
+        
+    </script>
+</body>
+</html>

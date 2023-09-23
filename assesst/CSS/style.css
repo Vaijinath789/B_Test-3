@@ -1,0 +1,219 @@
+header{
+    font-size: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+    color: aqua;
+   }
+
+   nav{
+    padding: 10px;
+    background-color: antiquewhite;
+   }
+   nav>ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+   }
+   nav>ul>li{
+    margin-top: 4px;
+    padding: 5px;
+   }
+   nav>ul>li>a{
+    list-style: none;
+    text-decoration: none;
+    color: red;
+    background-color: antiquewhite;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+   }
+
+   nav>ul>li>a:hover{
+    color: aqua;
+    background-color: blueviolet;
+   }
+
+   .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+
+    .card1{
+        width: 30%;
+        background-color: aquamarine;
+        transition: 1s; 
+        animation: slide 2s ease forwards;
+        border: 2px solid black;
+    }
+    .card1:hover{
+        transform: translateY(-5px);
+    }
+
+    @keyframes slide{
+        0%{
+            transform: translateX(-300px);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+    .card1>img{
+        width: 100%;
+    }
+
+    .card2{
+        width: 30%;
+        background-color: aquamarine;
+        transition: 1s; 
+        animation: slide2 2s ease forwards;
+        border: 2px solid black;
+    }
+    .card2:hover{
+        transform: translateY(-5px);
+    }
+
+    @keyframes slide2{
+        0%{
+            transform: translateY(300px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+    .card2>img{
+        width: 100%;
+    }
+
+    .card3{
+        width: 30%;
+        background-color: aquamarine;
+        transition: 1s; 
+        animation: slide3 2s ease forwards;
+        border: 2px solid black;
+    }
+    .card1:hover{
+        transform: translateY(-5px);
+    }
+
+    @keyframes slide3{
+        0%{
+            transform: translateX(300px);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+    .card3>img{
+        width: 100%;
+    }
+
+    .card4{
+        width: 30%;
+        background-color: aquamarine;
+        transition: 1s; 
+        animation: slide 2s ease forwards;
+        margin-top: 7px;
+        transition: 2s ease-in-out;
+        border: 2px solid black;
+    }
+    .card4:hover{
+        transform: translateY(-7px);
+    }
+    .card4>img{
+        width: 100%;
+    }
+
+
+    .card5{
+        width: 30%;
+        background-color: aquamarine;
+        transition: 1s; 
+        animation: slide5 2s ease forwards;
+        margin-top: 7px;
+        border: 2px solid black;
+    }
+    .card5:hover{
+        transform: translateY(-5px);
+    }
+
+    .card5>img{
+        width: 100%;
+    }
+
+
+    .card6{
+        width: 30%;
+        background-color: aquamarine;
+        transition: 1s; 
+        animation: slide6 2s ease forwards;
+        margin-top: 7px;
+        border: 2px solid black;
+    }
+    .card6:hover{
+        transform: translateY(-5px);
+    }
+
+    .card6>img{
+        width: 100%;
+    }
+
+    h1{
+        padding: 10px;
+        animation: color 5s infinite;
+
+    }
+
+    @keyframes color{
+        from{
+            color: bisque;
+            background-color: aqua;
+        }
+        to{
+            color: blueviolet;
+            background-color: rgb(146, 207, 150);
+        }
+    }
+
+
+
+@media(max-width:600px){
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+    .card1{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .card2{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .card3{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .card4{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .card5{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .card6{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
